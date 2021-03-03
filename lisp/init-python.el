@@ -52,7 +52,8 @@
     (exec-path-from-shell-copy-env "PYTHONPATH"))
 
   ;; Live Coding in Python
-  (use-package live-py-mode))
+  (use-package live-py-mode)
+  (use-package cython-mode))
 
 (provide 'init-python)
 
