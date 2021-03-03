@@ -12,8 +12,8 @@
 ;; (setq centaur-icon nil)                        ; Display icons or not: t or nil
 (setq centaur-package-archives 'melpa)   ; Package repo: melpa, emacs-china, netease, ustc, tencent or tuna
 ;; (setq centaur-theme 'light)                    ; Color theme: auto, random, default, classic, colorful, dark, light, day or night
-;; (setq centaur-dashboard nil)                   ; Use dashboard at startup or not: t or nil
-;; (setq centaur-restore-frame-geometry nil)      ; Restore the frame's geometry at startup: t or nil
+;;(setq centaur-dashboard t)                   ; Use dashboard at startup or not: t or nil
+;;(setq centaur-restore-frame-geometry t)      ; Restore the frame's geometry at startup: t or nil
 ;; (setq centaur-lsp 'eglot)                      ; Set LSP client: lsp-mode, eglot or nil
 ;; (setq centaur-lsp-format-on-save-ignore-modes '(c-mode c++-mode)) ; Ignore format on save for some languages
 ;; (setq centaur-chinese-calendar t)              ; Use Chinese calendar or not: t or nil
@@ -64,7 +64,7 @@
 ;;       calendar-longitude 104.07)
 
 ;; Misc.
-;; (setq confirm-kill-emacs 'y-or-n-p)
+(setq confirm-kill-emacs 'y-or-n-p)
 
 ;; Enable proxy
 ;; (proxy-http-enable)
@@ -87,5 +87,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+
 
 ;;; custom.el ends here

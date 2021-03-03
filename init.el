@@ -142,7 +142,7 @@ decrease this. If you experience stuttering, increase this.")
 
 (require 'init-markdown)
 (require 'init-org)
-(require 'init-reader)
+;;(require 'init-reader)
 
 (require 'init-docker)
 (require 'init-utils)
@@ -156,13 +156,13 @@ decrease this. If you experience stuttering, increase this.")
 (require 'init-prog)
 (require 'init-elisp)
 (require 'init-c)
-(require 'init-go)
-(require 'init-rust)
+;;(require 'init-go)
+;;(require 'init-rust)
 (require 'init-python)
-(require 'init-ruby)
-(require 'init-dart)
+;;(require 'init-ruby)
+;;(require 'init-dart)
 (require 'init-elixir)
-(require 'init-web)
+;;(require 'init-web)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init.el ends here
