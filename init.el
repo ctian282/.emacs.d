@@ -49,12 +49,13 @@
 
 
 ;;; Code:
+;;(native-compile-async "~/.emacs.d/elpa" 'recursively)
 
 (when (version< emacs-version "25.1")
   (error "This requires Emacs 25.1 and above!"))
 
 ;; Speed up startup
-(defvar centaur-gc-cons-threshold (if (display-graphic-p) 16000000 1600000)
+(defvar centaur-gc-cons-threshold (if (display-graphic-p) 100000000 1600000)
   "The default value to use for `gc-cons-threshold'. If you experience freezing,
 decrease this. If you experience stuttering, increase this.")
 
@@ -162,6 +163,7 @@ decrease this. If you experience stuttering, increase this.")
 ;;(require 'init-ruby)
 ;;(require 'init-dart)
 (require 'init-elixir)
+(require 'init-latex)
 ;;(require 'init-web)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
