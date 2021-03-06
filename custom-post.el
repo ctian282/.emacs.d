@@ -1,8 +1,6 @@
-
 (setq package-native-compile t)
 
 (setq lsp-ui-doc-enable nil)
-
 
 (setq company-idle-delay 0.3)
 
