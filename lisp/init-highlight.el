@@ -136,7 +136,7 @@ FACE defaults to inheriting from default and highlight."
 (when (display-graphic-p)
   (use-package highlight-indent-guides
     :diminish
-    :hook (prog-mode . highlight-indent-guides-mode)
+    :hook (python-mode . highlight-indent-guides-mode)
     :init (setq highlight-indent-guides-method 'character
                 highlight-indent-guides-responsive 'top)
     :config
