@@ -77,7 +77,8 @@
 (use-package autorevert
   :ensure nil
   :diminish
-  :hook (after-init . global-auto-revert-mode))
+  ;;:hook (after-init . global-auto-revert-mode)
+  )
 
 ;; Pass a URL to a WWW browser
 (use-package browse-url
