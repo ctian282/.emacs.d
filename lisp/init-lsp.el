@@ -469,6 +469,10 @@
 
            (setq lsp-treemacs-theme "centaur-colors")))))
 
+   (use-package lsp-latex
+     :hook ( (LaTeX-mode bibtex-mode). (lambda ()
+                                         (require 'lsp-latex)
+                                         (lsp))))
    ;; Python: pyright
    (use-package lsp-pyright
      :preface

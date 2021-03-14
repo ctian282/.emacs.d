@@ -1,25 +1,13 @@
 
-;; (eval-after-load 'latex
-;;   '(define-key LaTeX-mode-map (kbd "C-v") 'TeX-view))
-
 (use-package auctex
-  :hook (LaTeX-mode . (lambda () (flyspell-mode t)))
+  :hook (LaTeX-mode . (lambda () (flyspell-mode t)
+                        (add-hook 'after-save-hook #'latexmk 1 'make-it-local)
+                        ))
   :config
   )
 (use-package cdlatex
   :hook (LaTeX-mode . (lambda () (cdlatex-mode t))))
 
-(use-package lsp-latex)
-
-(require 'lsp-latex)
-;; "texlab" must be located at a directory contained in `exec-path'.
-;; If you want to put "texlab" somewhere else,
-;; you can specify the path to "texlab" as follows:
-;; (setq lsp-latex-texlab-executable "/path/to/texlab")
-
-(with-eval-after-load "tex-mode"
-  (add-hook 'tex-mode-hook 'lsp)
-  (add-hook 'latex-mode-hook 'lsp))
 
 (defgroup auctex-latexmk nil
   "Add LatexMk support to AUCTeX."
@@ -70,7 +58,7 @@
                     (t "")))))
   (setq-default TeX-command-list
                 (cons
-                 '("LatexMk" "TEXMFOUTPUT=/tmp/latex/%s latexmk -pvc %(-PDF)%S%(mode) %(file-line-error) -outdir=/tmp/latex/%s %(extraopts) -pdflatex='pdflatex -synctex=1 -file-line-error -shell-escape' %t"   TeX-run-latexmk nil
+                 '("LatexMk" "TEXMFOUTPUT=/tmp/latex/%s latexmk %(-PDF)%S%(mode) %(file-line-error) -outdir=/tmp/latex/%s %(extraopts) -pdflatex='pdflatex -synctex=1 -file-line-error -shell-escape' %t"   TeX-run-latexmk nil
                    (plain-tex-mode latex-mode doctex-mode) :help "Run LatexMk")
                  TeX-command-list)
                 LaTeX-clean-intermediate-suffixes
